@@ -5,7 +5,7 @@ Language: Lua
 
 ## Current progress
 
-Day 1: <span style="color:yellow"></span>\
+Day 1: <span style="color:yellow">&#11088;</span>\
 Day 2: <span style="color:yellow"></span>\
 Day 3: <span style="color:yellow"></span>\
 Day 4: <span style="color:yellow"></span>\
@@ -31,12 +31,12 @@ Day 23: <span style="color:yellow"></span>\
 Day 24: <span style="color:yellow"></span>\
 Day 25: <span style="color:yellow"></span>\
 \
-Total: 0 out of 50
+Total: 1 out of 50
 
 # Other years
 
 [2019](https://github.com/Bjoergermeister/AdventOfCode2019) (Python)\
 [2020](https://github.com/Bjoergermeister/AdventOfCode2020) (C#)\
 [2021](https://github.com/Bjoergermeister/AdventOfCode2021) (Rust)\
-[2022](https://github.com/Bjoergermeister/AdventOfCode2022) (Dart)
+[2022](https://github.com/Bjoergermeister/AdventOfCode2022) (Dart)\
 [2023](httos;//github.com/Bjoergermeister/AdventOfCode2023) (Go)
