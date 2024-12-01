@@ -1,3 +1,6 @@
+ListA = {}
+ListB = {}
+
 function split_string(line)
     local separator = "%s"
     local substrings = {}
@@ -7,22 +10,46 @@ function split_string(line)
     return substrings
 end
 
-listA = {}
-listB = {}
-
 for line in io.lines("input.txt") do
-    substrings = split_string(line)
-    table.insert(listA, tonumber(substrings[1]))
-    table.insert(listB, tonumber(substrings[2]))
+    local substrings = split_string(line)
+    table.insert(ListA, tonumber(substrings[1]))
+    table.insert(ListB, tonumber(substrings[2]))
 end
 
-table.sort(listA)
-table.sort(listB)
+table.sort(ListA)
+table.sort(ListB)
 
-sumOfDistances = 0
-for index=1,1000,1 do
-    distance = math.abs(listA[index] - listB[index])
-    sumOfDistances = sumOfDistances + distance
+function part1()
+    local sumOfDistances = 0
+    for index=1,1000,1 do
+        local distance = math.abs(ListA[index] - ListB[index])
+        sumOfDistances = sumOfDistances + distance
+    end
+
+    return sumOfDistances
 end
 
-print(sumOfDistances)
+function part2()
+    local listB_quantities = {}
+    for _, value in ipairs(ListB) do
+        if listB_quantities[value] ~= nil then
+            local currentValue = listB_quantities[value]
+            listB_quantities[value] = currentValue + 1
+        else
+            listB_quantities[value] = 1
+        end
+    end
+
+    local sum = 0
+    for _, value in pairs(ListA) do
+        if listB_quantities[value] ~= nil then
+            sum = sum + (value * listB_quantities[value])
+        end
+    end
+
+    return sum
+end
+
+
+print(part1())
+print(part2())
